@@ -1,6 +1,14 @@
 package com.dio;
 
 public class Banco {
-    public int numero;
-    public String nome;
+    private int numero;
+    private String nome;
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

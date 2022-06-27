@@ -1,5 +1,7 @@
 package com.dio;
 
+import com.dio.banco.Banco;
+
 public class ContaCorrente extends Conta {
 
     public ContaCorrente(Banco banco, Cliente cliente) {

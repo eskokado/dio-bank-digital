@@ -1,5 +1,7 @@
 package com.dio;
 
+import com.dio.banco.Banco;
+
 public abstract class Conta implements IConta {
     private static int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;

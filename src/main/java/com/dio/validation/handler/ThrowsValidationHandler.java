@@ -1,6 +1,7 @@
 package com.dio.validation.handler;
 
 import com.dio.exception.DomainException;
+import com.dio.validation.Error;
 import com.dio.validation.ValidationHandler;
 
 import java.util.List;

@@ -2,6 +2,7 @@ package com.dio.banco;
 
 import com.dio.validation.ValidationHandler;
 import com.dio.validation.Validator;
+import com.dio.validation.Error;
 
 public class BancoValidator extends Validator {
     public static final int NUMERO_MAX_LENGTH = 20;
@@ -24,11 +25,11 @@ public class BancoValidator extends Validator {
     private void checkNomeConstraints() {
         var nome = this.banco.getNome();
         if (nome == null) {
-            this.validationHandler().append(new Error("'nome' não pode ser nulo"));
+            this.validationHandler().append(new Error("'nome' should not be null"));
             return;
         }
         if (nome.isBlank()) {
-            this.validationHandler().append(new Error("'nome' não pode ser vazio"));
+            this.validationHandler().append(new Error("'nome' should not be empty"));
             return;
             
         }
@@ -40,11 +41,11 @@ public class BancoValidator extends Validator {
     private void checkNumeroConstraints() {
         var numero = this.banco.getNumero();
         if (numero == null) {
-            this.validationHandler().append(new Error("'numero' não pode ser nulo"));
+            this.validationHandler().append(new Error("'numero' should not be null"));
             return;
         }
         if (numero.isBlank()) {
-            this.validationHandler().append(new Error("'numero' não pode ser vazio"));
+            this.validationHandler().append(new Error("'numero' should not be empty"));
             return;
         }
         final int length = numero.trim().length();
